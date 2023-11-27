@@ -1,6 +1,4 @@
-Certainly! Here is the README.md content in plain text:
 
-```
 # Flights Research Service
 
 Welcome to the Flights Research Service! This application interacts with a flights API to provide information about flights and recommendations based on the most frequently visited months.
@@ -61,15 +59,3 @@ Make sure to set the environment variable `FLIGHTS_API_URL` to the URL of the Fl
 export FLIGHTS_API_URL="http://localhost:8000"
 ```
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
-
-## Acknowledgments
-
-- This application was developed as part of a research project.
-
-Feel free to customize this README.md to include additional information about your project, dependencies, or any other relevant details.
-```
-
-Copy and paste this content into your README.md file in your GitHub repository.
