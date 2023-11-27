@@ -1,92 +1,75 @@
-# Flights Mongo DB
+Certainly! Here is the README.md content in plain text:
 
-**Description**: This Python project utilizes MongoDB to manage and provide information about flights, cities, and recommendations for airports that can open food services.
+```
+# Flights Research Service
 
-## Table of Contents
+Welcome to the Flights Research Service! This application interacts with a flights API to provide information about flights and recommendations based on the most frequently visited months.
 
-- [Features](#features)
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Endpoints](#endpoints)
-- [Database Structure](#database-structure)
-- [Contributing](#contributing)
-- [License](#license)
+## Getting Started
 
-## Features
+These instructions will help you set up and run the Flights Research Service on your local machine.
 
-1. **List Flights**: Retrieve a list of flights from all cities.
-2. **List Cities**: Obtain a list of all added cities.
-3. **Airport Recommendations**: Get recommendations for airports that can open food services.
-
-## Requirements
+### Prerequisites
 
 - Python 3.x
-- MongoDB (Make sure your MongoDB server is running)
+- pip (Python package installer)
 
-## Installation
+### Installation
 
 1. Clone the repository:
 
-    ```bash
-    git clone https://github.com/AndresQuiVal/mongodb-flights
-    cd your-repo
-    ```
+   ```bash
+   git clone https://github.com/your-username/flights-research-service.git
+   ```
 
-2. Install the required Python packages:
+2. Navigate to the project directory:
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+   ```bash
+   cd flights-research-service
+   ```
 
-3. Set up your MongoDB connection in the application.
+3. Install the required Python packages:
 
-    - Open the `config.py` file and update the MongoDB connection settings.
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-4. Run the application:
+### Usage
 
-    ```bash
-    python main.py
-    ```
+Run the application by executing the `main.py` script:
 
-## Usage
+```bash
+python main.py [action]
+```
 
-- Access the API at `http://localhost:8000` (or the appropriate URL).
+Replace `[action]` with one of the following options:
+- `list`: Retrieve a list of flights.
+- `recommended`: Get recommendations based on the most frequently visited months.
+- `recommended-ag`: Get recommendations using the aggregation method.
 
-## Endpoints
+Example:
 
-1. **List All Flights**
-   - Endpoint: `/list_flights`
-   - Method: GET
-   - Description: Retrieve a list of flights from all cities.
+```bash
+python main.py list
+```
 
-2. **List All Cities**
-   - Endpoint: `/list_cities`
-   - Method: GET
-   - Description: Obtain a list of all added cities.
+## Configuration
 
-## Database Structure
+Make sure to set the environment variable `FLIGHTS_API_URL` to the URL of the Flights API.
 
-The MongoDB database is structured as follows:
+```bash
+export FLIGHTS_API_URL="http://localhost:8000"
+```
 
-```json
-{
-    "City1": {
-        "airport": {
-            "city_name": "City1",
-            "airport_dest": "Airport1",
-            "flights": [
-                {
-                    "airline": "Airline1",
-                    "from_location": "City1",
-                    "to_location": "Destination1",
-                    // Other flight details
-                }
-            ]
-        }
-    },
-    "City2": {
-        // City2 details
-    },
-    // Other cities
-}
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+## Acknowledgments
+
+- This application was developed as part of a research project.
+
+Feel free to customize this README.md to include additional information about your project, dependencies, or any other relevant details.
+```
+
+Copy and paste this content into your README.md file in your GitHub repository.
