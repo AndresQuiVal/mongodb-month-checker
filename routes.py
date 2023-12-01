@@ -51,18 +51,3 @@ def list_flights(request: Request):
             all_flights.extend(item['airport']['flights'])
 
     return all_flights
-
-
-@router.get("/list_flights", response_description="Get all created flights", response_model=List[Flight])
-def list_flights(request: Request):
-    all_flights = []
-
-    r = list(request.app.database['cities'].find())
-    for item in r:
-        item['_id'] = str(item['_id'])
-        print(item)
-
-        if len(item['airport']['flights']) > 0:
-            all_flights.extend(item['airport']['flights'])
-
-    return all_flights
